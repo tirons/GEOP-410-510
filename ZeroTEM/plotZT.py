@@ -5,9 +5,9 @@ import matplotlib as mpl
 
 plt.rcParams.update({
     "font.family": "serif",  # use serif/main font for text elements
-    "text.usetex": True,     # use inline math for ticks
-    "pgf.rcfonts": False     # don't setup fonts from rc parameters
-    })
+#    "text.usetex": True,     # use inline math for ticks
+#    "pgf.rcfonts": False     # don't setup fonts from rc parameters
+})
 
 import sys
 import glob
@@ -255,7 +255,7 @@ class ZeroTEMSounding( TEMSounding ):
         except:
             pgfTitle = str(freq)
 
-        plt.savefig(pgfTitle+"_stack.pgf")
+        #plt.savefig(pgfTitle+"_stack.pgf")
         plt.savefig(pgfTitle+"_stack.pdf")
 
         # apparent resistivity plot
@@ -267,7 +267,7 @@ class ZeroTEMSounding( TEMSounding ):
             #plt.gca().set_yscale('log')
             plt.gca().set_xscale('log')
             plt.gca().set_xlabel("time (s)")
-            plt.savefig(pgfTitle+"_ar.pgf")
+            plt.savefig(pgfTitle+"_ar.pdf")
 
 
         firstPlot = False
@@ -764,7 +764,7 @@ class ZeroTEMSounding( TEMSounding ):
                                    extend='both')
         cb1.set_label("resistivity ($\Omega \cdot \mathrm{m}$)", fontsize=12)
         aax3.legend()
-        figa.savefig( sdir+"_inv.pgf" )
+        figa.savefig( sdir+"_inv.pdf" )
 
 
 if __name__ == "__main__":
