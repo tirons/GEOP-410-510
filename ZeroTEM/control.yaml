@@ -1,0 +1,11 @@
+TxAbs: [ 0., 0.7,  15.65, 15.81]
+TxAmp: [0.,3.75,3.75,0]
+TxDly: .036 
+TxType: "Square"
+TxSize: 100
+Nlay: 10
+SRes: [20.]
+#SRes: [20.,10,100,100,300,800,1000,1000,5.] 
+Smooth: True
+PDepth: 500
+Invert: "False" 
