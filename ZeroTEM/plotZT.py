@@ -650,7 +650,7 @@ class ZeroTEMSounding( TEMSounding ):
         """ Calls AMIRA Beowulf inversion. 
         """
         subprocess.call("./Beowulf")
-        subprocess.call(["copy", "Beowulf.mv1", sdir+".mv1"])
+        #subprocess.call(["copy", "Beowulf.mv1", sdir+".mv1"])
 
     def readMV1(self, filename):
         with open(filename) as mv1:
@@ -679,7 +679,8 @@ class ZeroTEMSounding( TEMSounding ):
 
     def modelAppraisal(self, sdir):
 
-        sig, thick, depth, depthc, obs, pre, tg = self.readMV1(sdir+".mv1")
+        #sig, thick, depth, depthc, obs, pre, tg = self.readMV1(sdir+".mv1")
+        sig, thick, depth, depthc, obs, pre, tg = self.readMV1("Beowulf.mv1")
         tg *= 1e-3
 
         #subprocess.call(["python", "plotMV1.py", sdir+".mv1"])
