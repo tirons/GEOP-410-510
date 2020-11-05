@@ -650,7 +650,7 @@ class ZeroTEMSounding( TEMSounding ):
         """ Calls AMIRA Beowulf inversion. 
         """
         subprocess.call("./Beowulf")
-        subprocess.call(["mv", "Beowulf.mv1", sdir+".mv1"])
+        subprocess.call(["move", "Beowulf.mv1", sdir+".mv1"])
 
     def readMV1(self, filename):
         with open(filename) as mv1:
